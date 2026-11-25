@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна робота 2 — Завдання 2</title>
+</head>
+<body>
+  <h3>Лабораторна робота 2 — Завдання 2</h3>
+  <p>Результати виводяться в консоль (F12 → Console)</p>
+  <script>
+    function term(i) {
+      return (Math.pow(i, 3) - 1) / (Math.pow(i, 2) + i + 5);
+    }
+
+    function factor(l) {
+      return (l + 2) / ((l + 4) * (l - 11));
+    }
+
+    console.log("Завдання 2. Сума та добуток через функції term() і factor()");
+    let n = 7;
+    let sum = 0;
+    for (let i = 2; i <= n; i++) {
+      sum += term(i);
+      console.log(`i = ${i}, доданок = ${term(i).toFixed(5)}`);
+    }
+    console.log("y =", sum);
+
+    let k = 1;
+    let p = 1;
+    for (let l = k; l <= 9; l++) {
+      p *= factor(l);
+      console.log(`l = ${l}, множник = ${factor(l).toFixed(5)}`);
+    }
+    console.log("p =", p);
+  </script>
+</body>
+</html>

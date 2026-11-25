@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна робота 2 — Завдання 1</title>
+</head>
+<body>
+  <h3>Лабораторна робота 2 — Завдання 1</h3>
+  <p>Результати виводяться в консоль (F12 → Console)</p>
+  <script>
+    function f(x) {
+      return (Math.sin(x) * Math.cos(x)) / (x + 3);
+    }
+
+    console.log("Завдання 1. Табулювання функції через f(x)");
+    console.log("а) відрізок [0; 2], крок 0,2:");
+    let a = 0, b = 2, dx = 0.2;
+    for (let x = a; x <= b + 1e-9; x += dx) {
+      console.log(`x = ${x.toFixed(3)}, y = ${f(x).toFixed(5)}`);
+    }
+
+    console.log("б) 6 значень від x0 = 0,5, крок 0,15:");
+    let x0 = 0.5, dx2 = 0.15, n = 6;
+    let x = x0, i = 0;
+    while (i < n) {
+      console.log(`x = ${x.toFixed(3)}, y = ${f(x).toFixed(5)}`);
+      x += dx2;
+      i++;
+    }
+  </script>
+</body>
+</html>

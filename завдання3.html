@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Лабораторна робота 2 — Завдання 3</title>
+</head>
+<body>
+  <h3>Лабораторна робота 2 — Завдання 3</h3>
+  <p>Результати виводяться в консоль (F12 → Console)</p>
+  <script>
+    const Y = [3.3, -1.1, 2.2, -4.4, 5.5, -6.6, 7.7, -8.8];
+    console.log("Завдання 3. Масив Y:", Y);
+
+    const numbers = [];
+    Y.forEach((value, index) => {
+      const place = index + 1;
+      if (place % 2 === 0 && value < 0) {
+        numbers.push(place);
+        console.log(`Елемент №${place} = ${value} — від'ємний, стоїть на парному місці`);
+      }
+    });
+
+    console.log("Номери від'ємних елементів на парних місцях:", numbers.join(", "));
+    console.log("Кількість таких елементів:", numbers.length);
+  </script>
+</body>
+</html>
